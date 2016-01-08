@@ -1,0 +1,6 @@
+#Name of the themes, if enabled tell true
+themes:
+    "light": true
+    #"theme2":
+    #"theme3":
+    #"theme4":
