@@ -4,55 +4,16 @@ include "bootstrap.php";
 
 ?>
 <!DOCTYPE html>
-<!--
-Theme default of Glance
---
-<html>
-    <head>
-        <title>Demo using Glance</title>
-        <meta charset="UTF-8">
-	
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <h1>Demo using Glance</h1>
-        <=$theme->enqueue('img/light.jpg')?>
-        <br />
-        <=$theme->img('light.jpg')?>
-        <br />
-        <php
-        foreach($theme->img(array("books1","books2"), "png") as $book):            
-            echo "$book<br/>";            
-        endforeach;        
-        ?>
-        <=$theme->js('light')?>
-        
-        <div>
-            <p>Other theme</p>
-            <ul>
-                <li><=$theme->js('home')?></li>
-                <li><=$theme->js('light')?></li>
-            </ul>
-            <img src="<= $theme->enqueue('img/books1.png');?>"/>
-            
-        </div>
-        
-    </body>
-</html>
-
--->
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
-    <meta name="author" content="">
-    <!--<link rel="icon" href="<=$theme->enqueue('img/favicon.ico')?>">-->
+    <meta name="author" content="Demo-Glance">
+    <link rel="icon" href="<?=$theme->img('favicon.ico')?>">
 
-    <title>Dashboard Theme Light</title>
+    <title>Theme Light</title>
 
     
     <!-- Bootstrap core CSS -->
@@ -90,17 +51,18 @@ Theme default of Glance
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Theme Light</a>
+            <a class="navbar-brand" href="#"><img class="logo" src="<?=$theme->img('logo')?>"/> <span>Theme Light</span></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-user"></i> Profile</a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-question-sign"></i> Help</a></li>
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
+          <form class="navbar-form navbar-left">
+              <div class="input-group">
+                <input type="text" class="form-control search" placeholder="Any question?">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+              </div>
           </form>
         </div>
       </div>
@@ -108,141 +70,58 @@ Theme default of Glance
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
+        <div id="main-sidebar" class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Themes<span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
+            <li class="active"><a href="#"><i class="glyphicon glyphicon-dashboard"></i> Dashboard<span class="sr-only">(current)</span></a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-user"></i> Users</a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-upload"></i> Uploads</a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-stats"></i> Analytics</a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-cog"></i> Settings</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
-          <h2 class="sub-header">Section title</h2>
+          <h2 class="sub-header">User access</h2>
           <div class="table-responsive">
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
+                  <th>Code</th>
+                  <th>User</th>
+                  <th>Login</th>
+                  <th>Logout</th>
                 </tr>
               </thead>
               <tbody>
+                  
                 <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
+                  <td>185628</td>
+                  <td>Anne Ford</td>
+                  <td>2016-01-08  2 min ago</td>
+                  <td>online</td>
                 </tr>
+                
                 <tr>
-                  <td>1,002</td>
-                  <td>amet</td>
-                  <td>consectetur</td>
-                  <td>adipiscing</td>
-                  <td>elit</td>
+                  <td>185629</td>
+                  <td>Jack Shephard</td>
+                  <td>2016-01-08 1 h 24 min ago</td>
+                  <td>2016-01-08 15 min ago</td>
                 </tr>
+                
                 <tr>
-                  <td>1,003</td>
-                  <td>Integer</td>
-                  <td>nec</td>
-                  <td>odio</td>
-                  <td>Praesent</td>
+                  <td>185630</td>
+                  <td>Alice Lindelof</td>
+                  <td>2016-01-08 1 h 3 min ago</td>
+                  <td>online</td>
                 </tr>
+                
                 <tr>
-                  <td>1,003</td>
-                  <td>libero</td>
-                  <td>Sed</td>
-                  <td>cursus</td>
-                  <td>ante</td>
+                  <td>185631</td>
+                  <td>John Locke</td>
+                  <td>2016-01-08 46 min ago</td>
+                  <td>2016-01-08 13 min ago</td>
                 </tr>
-                <tr>
-                  <td>1,004</td>
-                  <td>dapibus</td>
-                  <td>diam</td>
-                  <td>Sed</td>
-                  <td>nisi</td>
-                </tr>
-                <tr>
-                  <td>1,005</td>
-                  <td>Nulla</td>
-                  <td>quis</td>
-                  <td>sem</td>
-                  <td>at</td>
-                </tr>
-                <tr>
-                  <td>1,006</td>
-                  <td>nibh</td>
-                  <td>elementum</td>
-                  <td>imperdiet</td>
-                  <td>Duis</td>
-                </tr>
-                <tr>
-                  <td>1,007</td>
-                  <td>sagittis</td>
-                  <td>ipsum</td>
-                  <td>Praesent</td>
-                  <td>mauris</td>
-                </tr>
-                <tr>
-                  <td>1,008</td>
-                  <td>Fusce</td>
-                  <td>nec</td>
-                  <td>tellus</td>
-                  <td>sed</td>
-                </tr>
-                <tr>
-                  <td>1,009</td>
-                  <td>augue</td>
-                  <td>semper</td>
-                  <td>porta</td>
-                  <td>Mauris</td>
-                </tr>
-                <tr>
-                  <td>1,010</td>
-                  <td>massa</td>
-                  <td>Vestibulum</td>
-                  <td>lacinia</td>
-                  <td>arcu</td>
-                </tr>
-                <tr>
-                  <td>1,011</td>
-                  <td>eget</td>
-                  <td>nulla</td>
-                  <td>Class</td>
-                  <td>aptent</td>
-                </tr>
-                <tr>
-                  <td>1,012</td>
-                  <td>taciti</td>
-                  <td>sociosqu</td>
-                  <td>ad</td>
-                  <td>litora</td>
-                </tr>
-                <tr>
-                  <td>1,013</td>
-                  <td>torquent</td>
-                  <td>per</td>
-                  <td>conubia</td>
-                  <td>nostra</td>
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>per</td>
-                  <td>inceptos</td>
-                  <td>himenaeos</td>
-                  <td>Curabitur</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                </tr>
+                
               </tbody>
             </table>
           </div>
@@ -250,16 +129,21 @@ Theme default of Glance
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="<?=$theme->enqueue('assets/jquery/jquery.min-1.11.3.js')?>"></script>
     <script>window.jQuery || document.write('<script src="<?=$theme->enqueue('assets/jquery/jquery.min-1.11.3.js')?>"><\/script>')</script>
     <script src="<?=$theme->enqueue('assets/bootstrap-3.3.6/js/bootstrap.min.js')?>"></script>
+    
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="<?=$theme->enqueue('assets/holder.min.js')?>"></script>
+    
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="<?=$theme->enqueue('assets/ie10-viewport-bug-workaround.js')?>"></script>
+    
+    <!-- Begin scripts current page -->
+    <?=$theme->js(array('main', 'home'))?>
+    <!-- End scripts current page -->
+    
   </body>
 </html>
 
