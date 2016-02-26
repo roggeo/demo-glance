@@ -1,7 +1,7 @@
 #Demo Glance
 
 Exemplo de como usar este gerenciador de Temas (coisas relacionadas a estilo de sua web page).
-Por favor, não confunda com um gerenciador de templates como Twing, Smarty, Plates, Volt, Blade, Mustache entre outros.
+Por favor, não confunda com um gerenciador de templates como Twig, Smarty, Plates, Volt, Blade, Mustache entre outros.
 Mas se você está procurando por um Gerenciador de Template [veja este link](http://www.sitecrafting.com/blog/top-5-php-template-engines/), pode te ajudar.
 
 ##Instalação
