@@ -1,0 +1,174 @@
+@font-face {
+  font-family: 'Open Sans Light';
+  src: url('../fonts/open-sans/OpenSans-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans Regular';
+  src: url('../fonts/open-sans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Open Sans Bold';
+  src: url('../fonts/open-sans/OpenSans-Bold.ttf');
+}
+  
+
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  font-family: "Open Sans Light";
+  font-weight: 300;
+}
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+.navbar-fixed-top {
+  border: 0;
+}
+
+.navbar-header a.navbar-brand {
+  padding:8px 14px 0 10px;
+}
+
+a.navbar-brand span{
+    margin-top: 6px;
+    float: left;
+}
+
+a.navbar-brand img.logo {
+    width: 35px;
+    height: 35px;
+    float: left;
+    margin-right: 12px;
+}
+
+
+/* Hide for mobile, show later */
+.sidebar {
+    display: none;
+}
+@media (min-width: 768px) {
+    
+    .navbar-inverse .navbar-nav>li>a {
+        color: white;
+        border-left: 1px #56B172 outset;
+        box-shadow: -1px 0 0 rgba(255,255,255,0.2);
+    }
+    
+    form.navbar-form input.search {
+        width: 300px !important;
+    } 
+    
+    .sidebar {
+      position: fixed;
+      top: 51px;
+      bottom: 0;
+      left: 0;
+      z-index: 1000;
+      display: block;
+      padding: 20px;
+      overflow-x: hidden;
+      overflow-y: auto;  /*Scrollable contents if viewport is shorter than content. */
+      background-color: #f5f5f5;
+      border-right: 1px solid #eee;
+    }
+}
+
+/* Sidebar navigation */
+.nav-sidebar {
+    margin-right: -21px; /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+  color:#847E7E;
+}
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+    color: #847E7E;
+    background-color: #CACACA;
+    box-shadow: inset 1px 1px 1px #B3AAAA;
+    text-shadow: 0px 1px 0px #ECEAEA;
+}
+
+.navbar.navbar-inverse {
+    background-color: #53BF7D !important;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: white;
+}
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
+    background-color: #75DC88;
+}
+.navbar-inverse .navbar-brand{
+    color: white;
+    margin-right: 25px;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form,
+.navbar-inverse .navbar-toggle {
+    border-color: #53A566;
+}
+
+/* Others */
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 20px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+.main .page-header {
+  margin-top: 0;
+}
+
+.main h1.page-header {
+    color: #53BF7D;
+}
+
+.main h2.sub-header {
+    color: #53BF7D;
+}
+
+.input-group span {
+    color: white;
+    border-color: #564F4F;
+    background: #564F4F;
+    cursor:pointer;
+}
+.input-group span:hover {
+    border-color: #564F4F;
+    background: #6D6A6A;
+}
